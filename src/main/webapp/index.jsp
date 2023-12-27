@@ -28,7 +28,7 @@ List<Product> topDeals = productDao.getDiscountedProducts();
 	<!-- Category list -->
 	<div class="">
 		<div class="">
-	<div class="p-2 text-center  font-bold bg-gray-900 text-white" >Categories</div>
+	<div class="p-2 text-center  font-bold text-white"  style="background : #151515;">Categories</div>
 			<div class="flex justify-center align-center gap-40 p-4">
 				<%
 				for (Category c : categoryList) {
@@ -51,7 +51,7 @@ List<Product> topDeals = productDao.getDiscountedProducts();
 				%>
 			</div>
 		</div>
-			<div class="p-4 text-center text-white bg-gray-900" ></div>
+			<div class="p-4 text-center text-white bg-gray-900" style="background : #151515;"></div>
 		
 	</div>
 	<!-- end of list -->
@@ -71,7 +71,7 @@ List<Product> topDeals = productDao.getDiscountedProducts();
 
 	<!-- latest product listed -->
 	    <div>
-	<div class="p-4 text-center  font-bold bg-gray-900 text-white my-4" >Latest products</div>
+	<div class="p-4 text-center  font-bold bg-gray-900 text-white my-4" style="background : #151515;" >Latest products</div>
     </div>
 <div class="grid grid-cols-3 gap-10 ">
 
@@ -130,7 +130,7 @@ List<Product> topDeals = productDao.getDiscountedProducts();
 
 	<!-- product with heavy deals -->
 	    <div>
-	<div class="p-4 text-center  font-bold bg-gray-900 text-white my-4" >Latest products</div>
+	<div class="p-4 text-center  font-bold bg-gray-900 text-white my-4" style="background : #151515;" >Top deal</div>
     </div>
 <div class="grid grid-cols-4 gap-10 ">
 
@@ -212,6 +212,9 @@ List<Product> topDeals = productDao.getDiscountedProducts();
 	session.removeAttribute("order");
 	%>
 	<!-- end of message -->
+	
+		<!--footer -->
+	<%@include file="Components/footer.jsp"%>
 	
 </body>
 </html>

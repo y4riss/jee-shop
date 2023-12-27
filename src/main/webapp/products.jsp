@@ -41,7 +41,7 @@ if (prodList != null && prodList.size() == 0) {
 }
 %>
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
 <head>
 <meta charset="ISO-8859-1">
 <title>Products</title>
@@ -130,8 +130,8 @@ if (prodList != null && prodList.size() == 0) {
 						<h5 class="card-title text-center"><%=p.getProductName()%></h5>
 
 						<div class="container text-center">
-							<span class="real-price">&#8377;<%=p.getProductPriceAfterDiscount()%></span>&ensp;
-							<span class="product-price">&#8377;<%=p.getProductPrice()%></span>&ensp;
+							<span class="real-price"><%=p.getProductPriceAfterDiscount()%></span>&ensp;
+							<span class="product-price"><%=p.getProductPrice()%></span>&ensp;
 							<span class="product-discount"><%=p.getProductDiscount()%>&#37;off</span>
 						</div>
 						<div class="container text-center mb-2 mt-2">

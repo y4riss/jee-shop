@@ -13,6 +13,9 @@ Admin admin = (Admin) session.getAttribute("activeAdmin");
 CategoryDao catDao = new CategoryDao(ConnectionProvider.getConnection());
 List<Category> categoryList = catDao.getAllCategories();
 %>
+<link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 
 <nav class="flex gap-20 py-6 align-center justify-center items-center">
 
@@ -76,9 +79,9 @@ List<Category> categoryList = catDao.getAllCategories();
         int cartCount = cartDao.getCartCountByUserId(user.getUserId());
     %>
     <div class="flex gap-2 mr-2">
-        <a href="cart.jsp" aria-current="page"><i></i> &nbsp;Cart<span><%=cartCount%></span></a>
-        <a href="profile.jsp" aria-current="page"><%=user.getUserName()%></a>
-        <a href="LogoutServlet?user=user"><i></i>&nbsp;Logout</a>
+        <a class="btn btn-sm" href="cart.jsp" aria-current="page"><i></i> &nbsp;Cart<span><%=cartCount%></span></a>
+        <a class="btn btn-sm break-all" href="profile.jsp" aria-current="page"><%=user.getUserName()%></a>
+        <a  class="btn btn-sm" href="LogoutServlet?user=user"><i></i>&nbsp;Logout</a>
     </div>
     <%
     } else {

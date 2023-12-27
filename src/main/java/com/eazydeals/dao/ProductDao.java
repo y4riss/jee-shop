@@ -24,7 +24,7 @@ public class ProductDao {
 			psmt.setString(1, product.getProductName());
 			psmt.setString(2, product.getProductDescription());
 			psmt.setFloat(3, product.getProductPrice());
-			psmt.setInt(4, product.getProductQunatity());
+			psmt.setInt(4, product.getProductQuantity());
 			psmt.setInt(5, product.getProductDiscount());
 			psmt.setString(6, product.getProductImages());
 			psmt.setInt(7, product.getCategoryId());
@@ -51,7 +51,7 @@ public class ProductDao {
 				product.setProductName(rs.getString("name"));
 				product.setProductDescription(rs.getString("description"));
 				product.setProductPrice(rs.getFloat("price"));
-				product.setProductQunatity(rs.getInt("quantity"));
+				product.setProductQuantity(rs.getInt("quantity"));
 				product.setProductDiscount(rs.getInt("discount"));
 				product.setProductImages(rs.getString("image"));
 				product.setCategoryId(rs.getInt("cid"));
@@ -77,7 +77,7 @@ public class ProductDao {
 				product.setProductName(rs.getString("name"));
 				product.setProductDescription(rs.getString("description"));
 				product.setProductPrice(rs.getFloat("price"));
-				product.setProductQunatity(rs.getInt("quantity"));
+				product.setProductQuantity(rs.getInt("quantity"));
 				product.setProductDiscount(rs.getInt("discount"));
 				product.setProductImages(rs.getString("image"));
 				product.setCategoryId(rs.getInt("cid"));
@@ -103,7 +103,7 @@ public class ProductDao {
 			product.setProductName(rs.getString("name"));
 			product.setProductDescription(rs.getString("description"));
 			product.setProductPrice(rs.getFloat("price"));
-			product.setProductQunatity(rs.getInt("quantity"));
+			product.setProductQuantity(rs.getInt("quantity"));
 			product.setProductDiscount(rs.getInt("discount"));
 			product.setProductImages(rs.getString("image"));
 			product.setCategoryId(rs.getInt("cid"));
@@ -127,7 +127,7 @@ public class ProductDao {
 				product.setProductName(rs.getString("name"));
 				product.setProductDescription(rs.getString("description"));
 				product.setProductPrice(rs.getFloat("price"));
-				product.setProductQunatity(rs.getInt("quantity"));
+				product.setProductQuantity(rs.getInt("quantity"));
 				product.setProductDiscount(rs.getInt("discount"));
 				product.setProductImages(rs.getString("image"));
 				product.setCategoryId(rs.getInt("cid"));
@@ -156,7 +156,7 @@ public class ProductDao {
 				product.setProductName(rs.getString("name"));
 				product.setProductDescription(rs.getString("description"));
 				product.setProductPrice(rs.getFloat("price"));
-				product.setProductQunatity(rs.getInt("quantity"));
+				product.setProductQuantity(rs.getInt("quantity"));
 				product.setProductDiscount(rs.getInt("discount"));
 				product.setProductImages(rs.getString("image"));
 				product.setCategoryId(rs.getInt("cid"));
@@ -181,7 +181,7 @@ public class ProductDao {
 				product.setProductName(rs.getString("name"));
 				product.setProductDescription(rs.getString("description"));
 				product.setProductPrice(rs.getFloat("price"));
-				product.setProductQunatity(rs.getInt("quantity"));
+				product.setProductQuantity(rs.getInt("quantity"));
 				product.setProductDiscount(rs.getInt("discount"));
 				product.setProductImages(rs.getString("image"));
 				product.setCategoryId(rs.getInt("cid"));
@@ -202,7 +202,7 @@ public class ProductDao {
 			psmt.setString(1, product.getProductName());
 			psmt.setString(2, product.getProductDescription());
 			psmt.setFloat(3, product.getProductPrice());
-			psmt.setInt(4, product.getProductQunatity());
+			psmt.setInt(4, product.getProductQuantity());
 			psmt.setInt(5, product.getProductDiscount());
 			psmt.setString(6, product.getProductImages());
 			psmt.setInt(7, product.getProductId());

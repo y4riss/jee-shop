@@ -14,7 +14,7 @@ if (activeAdmin == null) {
 }
 %>
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Product</title>
@@ -61,7 +61,7 @@ if (activeAdmin == null) {
 								<div class="col-md-6 mb-2">
 									<label class="form-label"><b>Product Quantity</b></label> <input
 										type="number" name="quantity"
-										value="<%=product.getProductQunatity()%>" class="form-control">
+										value="<%=product.getProductQuantity()%>" class="form-control">
 								</div>
 								<div class="col-md-6 mb-2">
 									<label class="form-label"><b>Discount Percentage</b></label> <input

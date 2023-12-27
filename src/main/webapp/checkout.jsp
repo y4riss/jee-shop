@@ -1,3 +1,4 @@
+                                class="flex items-center justify-center w-full p-4 text-blue-500 border border-blue-500 rounded-md lg:w-2/5 dark:text-gray-200 dark:border-blue-600 hover:bg-blue-600 hover:border-blue-600 hover:text-gray-100 dark:bg-blue-500 dark:hover:bg-blue-700 dark:hover:border-blue-700 dark:hover:text-gray-300">
 <%@page import="com.eazydeals.entities.Message"%>
 <%@page import="com.eazydeals.dao.ProductDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -120,20 +121,20 @@ String from = (String)session.getAttribute("from");
 							</tr>
 							<tr>
 								<td>Total Price</td>
-								<td>&#8377; <%=totalPrice%></td>
+								<td> <%=totalPrice%></td>
 							</tr>
 							<tr>
 								<td>Delivery Charges</td>
-								<td>&#8377; 40</td>
+								<td> 40</td>
 							</tr>
 							<tr>
 								<td>Packaging Charges</td>
-								<td>&#8377; 29</td>
+								<td> 29</td>
 							</tr>
 							<tr>
 								<td><h5>Amount Payable :</h5></td>
 								<td><h5>
-										&#8377;
+										
 										<%=totalPrice + 69%></h5></td>
 							</tr>
 						</table>
@@ -150,20 +151,20 @@ String from = (String)session.getAttribute("from");
 							</tr>
 							<tr>
 								<td>Total Price</td>
-								<td>&#8377; <%=price%></td>
+								<td> <%=price%></td>
 							</tr>
 							<tr>
 								<td>Delivery Charges</td>
-								<td>&#8377; 40</td>
+								<td> 40</td>
 							</tr>
 							<tr>
 								<td>Packaging Charges</td>
-								<td>&#8377; 29</td>
+								<td> 29</td>
 							</tr>
 							<tr>
 								<td><h5>Amount Payable :</h5></td>
 								<td><h5>
-										&#8377;
+										
 										<%=price + 69%></h5></td>
 							</tr>
 						</table>

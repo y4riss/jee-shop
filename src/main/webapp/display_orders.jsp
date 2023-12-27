@@ -24,7 +24,7 @@ List<Order> orderList = orderDao.getAllOrder();
 UserDao userDao = new UserDao(ConnectionProvider.getConnection());
 %>
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
 <head>
 <meta charset="ISO-8859-1">
 <title>View Order's</title>
@@ -73,7 +73,7 @@ UserDao userDao = new UserDao(ConnectionProvider.getConnection());
 						style="width: 50px; height: 50px; width: auto;"></td>
 					<td><%=order.getOrderId()%></td>
 					<td><%=orderProduct.getName()%><br>Quantity: <%=orderProduct.getQuantity()%><br>Total
-						Price: &#8377;<%=orderProduct.getPrice() * orderProduct.getQuantity()%></td>
+						Price: <%=orderProduct.getPrice() * orderProduct.getQuantity()%></td>
 					<td><%=userDao.getUserName(order.getUserId())%><br>Mobile No. <%=userDao.getUserPhone(order.getUserId())%><br><%=userDao.getUserAddress(order.getUserId())%></td>
 					<td><%=order.getDate()%></td>
 					<td><%=order.getPayementType()%></td>

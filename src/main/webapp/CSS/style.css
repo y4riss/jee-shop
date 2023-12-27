@@ -16,6 +16,12 @@
 	max-width: 50px !important;
 	max-height: 50px !important;
 }
+header{
+	
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	margin-block : 2rem;
+}
 
 html{
 	margin-inline: 2rem;

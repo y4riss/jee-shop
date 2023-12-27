@@ -23,10 +23,12 @@ List<Product> topDeals = productDao.getDiscountedProducts();
 	<!--navbar -->
 	<%@include file="Components/navbar.jsp"%>
 
+
+	
 	<!-- Category list -->
 	<div class="">
 		<div class="">
-		<h1 class="border rounded border-black py-2 px-4 bg-gray-100 font-bold w-fit" >Categories</h1>
+	<div class="p-2 text-center text-black font-bold"  style="background : #e0fdaf;">Categories</div>
 			<div class="flex justify-center align-center gap-40 p-4">
 				<%
 				for (Category c : categoryList) {
@@ -49,16 +51,30 @@ List<Product> topDeals = productDao.getDiscountedProducts();
 				%>
 			</div>
 		</div>
+			<div class="p-4 text-center text-white" style="background : #e0fdaf;"></div>
+		
 	</div>
 	<!-- end of list -->
 
+	<!-- header-->
+<header class=" gap-10 h-fit p-4">
+    <div class="left flex flex-col items-center justify-center gap-10 ">
+        <img src="./Images/cameras.webp" class="w-[200px] rounded rounded-lg" />
+        <img src="./Images/cameras.webp" class="w-[200px] rounded rounded-lg" />
+    </div>
+    <div class="right  h-[300px] rounded overflow-hidden">
+        <img src="./Images/header_img.png" class="w-full h-[300px]" />
+    </div>
+</header>
 
+	<!-- end of header -->
 
 	<!-- latest product listed -->
-<div>
-    <div>
-        <h1>Latest Products</h1>
+	    <div>
+        <h1 class="bg-gray-600 p-10 text-white text-center" >Latest Products</h1>
     </div>
+<div class="grid grid-cols-3 gap-10 bg-red-200">
+
     <%
     for (int i = 0; i < Math.min(3, productList.size()); i++) {
     %>
@@ -95,7 +111,7 @@ List<Product> topDeals = productDao.getDiscountedProducts();
         <span class="mr-2 ml-3 rounded bg-yellow-200 px-2.5 py-0.5 text-xs font-semibold">5.0</span>
       </div>
     </div>
-    <a href="#" class="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+    <a href="viewProduct.jsp?pid=<%=productList.get(i).getProductId()%>"  class="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
       <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
       </svg>
@@ -104,23 +120,7 @@ List<Product> topDeals = productDao.getDiscountedProducts();
   </div>
 </div>
     
-    <div>
-        <a href="viewProduct.jsp?pid=<%=productList.get(i).getProductId()%>" style="text-decoration: none;">
-            <div>
-                <div>
-                    <img src="Product_imgs\<%=productList.get(i).getProductImages()%>" alt="<%=productList.get(i).getProductName()%>">
-                </div>
-                <div>
-                    <h5><%=productList.get(i).getProductName()%></h5>
-                    <div>
-                        <span>&#8377;<%=productList.get(i).getProductPriceAfterDiscount()%></span>
-                        &ensp;<span>&#8377;<%=productList.get(i).getProductPrice()%></span>&ensp;
-                        <span><%=productList.get(i).getProductDiscount()%>&#37; off</span>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
+
     <%
     }
     %>

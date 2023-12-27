@@ -23,7 +23,10 @@ header{
 	margin-block : 2rem;
 }
 
+body{
+	background-color: white;
+}
+
 html{
 	margin-inline: 2rem;
-	data-theme : "light";
 }

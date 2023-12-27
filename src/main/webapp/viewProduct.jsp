@@ -40,37 +40,37 @@ Product product = (Product) productDao.getProductsByProductId(productId);
 
 	<!--navbar -->
 	<%@include file="Components/navbar.jsp"%>
-<section class="overflow-hidden bg-white py-11 font-poppins dark:bg-gray-800">
+<section class=" bg-white py-11 font-poppins ">
         <div class="max-w-6xl px-4 py-4 mx-auto lg:py-8 md:px-6">
             <div class="flex flex-wrap -mx-4">
                 <div class="w-full mb-8 md:w-1/2 md:mb-0">
                     <div class="sticky top-0 z-50 overflow-hidden ">
                         <div class="relative mb-6 lg:mb-10 lg:h-2/4 ">
-                            <img src="https://i.postimg.cc/6qcPhTQg/R-18.png" alt=""
+                            <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
                                 class="object-cover w-full lg:h-full ">
                         </div>
                         <div class="flex-wrap hidden md:flex ">
                             <div class="w-1/2 p-2 sm:w-1/4">
                                 <a href="#" class="block border border-blue-300 hover:border-blue-300">
-                                    <img src="https://i.postimg.cc/6qcPhTQg/R-18.png" alt=""
+                                    <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
                                         class="object-cover w-full lg:h-20">
                                 </a>
                             </div>
                             <div class="w-1/2 p-2 sm:w-1/4">
                                 <a href="#" class="block border border-transparent hover:border-blue-300">
-                                    <img src="https://i.postimg.cc/6qcPhTQg/R-18.png" alt=""
+                                    <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
                                         class="object-cover w-full lg:h-20">
                                 </a>
                             </div>
                             <div class="w-1/2 p-2 sm:w-1/4">
                                 <a href="#" class="block border border-transparent hover:border-blue-300">
-                                    <img src="https://i.postimg.cc/6qcPhTQg/R-18.png" alt=""
+                                    <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
                                         class="object-cover w-full lg:h-20">
                                 </a>
                             </div>
                             <div class="w-1/2 p-2 sm:w-1/4">
                                 <a href="#" class="block border border-transparent hover:border-blue-300">
-                                    <img src="https://i.postimg.cc/6qcPhTQg/R-18.png" alt=""
+                                    <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
                                         class="object-cover w-full lg:h-20">
                                 </a>
                             </div>

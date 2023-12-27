@@ -23,7 +23,7 @@ public class UserDao {
 		boolean flag = false;
 
 		try {
-			String query = "insert into user(name, email, password, phone, gender, address, city, pincode, state) values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			String query = "insert into user(name, email, password, phone, gender, address, city, pincode) values(?, ?, ?, ?, ?, ?, ?, ?)";
 			PreparedStatement psmt = this.con.prepareStatement(query);
 			psmt.setString(1, user.getUserName());
 			psmt.setString(2, user.getUserEmail());
@@ -33,7 +33,6 @@ public class UserDao {
 			psmt.setString(6, user.getUserAddress());
 			psmt.setString(7, user.getUserCity());
 			psmt.setString(8, user.getUserPincode());
-			psmt.setString(9, user.getUserState());
 
 			psmt.executeUpdate();
 			flag = true;
@@ -66,7 +65,6 @@ public class UserDao {
 				user.setUserAddress(set.getString("address"));
 				user.setUserCity(set.getString("city"));
 				user.setUserPincode(set.getString("pincode"));
-				user.setUserState(set.getString("state"));
 			}
 
 		} catch (Exception e) {
@@ -94,7 +92,6 @@ public class UserDao {
 				user.setUserAddress(set.getString("address"));
 				user.setUserCity(set.getString("city"));
 				user.setUserPincode(set.getString("pincode"));
-				user.setUserState(set.getString("state"));
 				
 				list.add(user);
 			}
@@ -106,13 +103,12 @@ public class UserDao {
 
 	public void updateUserAddresss(User user) {
 		try {
-			String query = "update user set address = ?, city = ?, pincode = ?, state = ? where userid = ?";
+			String query = "update user set address = ?, city = ?, pincode = ?, where userid = ?";
 			PreparedStatement psmt = this.con.prepareStatement(query);
 			psmt.setString(1, user.getUserAddress());
 			psmt.setString(2, user.getUserCity());
 			psmt.setString(3, user.getUserPincode());
-			psmt.setString(4, user.getUserState());
-			psmt.setInt(5, user.getUserId());
+			psmt.setInt(4, user.getUserId());
 
 			psmt.executeUpdate();
 
@@ -136,7 +132,7 @@ public class UserDao {
 
 	public void updateUser(User user) {
 		try {
-			String query = "update user set name = ?, email = ?, phone = ?, gender = ?, address = ?, city = ?, pincode = ?, state = ? where userid = ?";
+			String query = "update user set name = ?, email = ?, phone = ?, gender = ?, address = ?, city = ?, pincode = ? where userid = ?";
 			PreparedStatement psmt = this.con.prepareStatement(query);
 			psmt.setString(1, user.getUserName());
 			psmt.setString(2, user.getUserEmail());
@@ -145,8 +141,7 @@ public class UserDao {
 			psmt.setString(5, user.getUserAddress());
 			psmt.setString(6, user.getUserCity());
 			psmt.setString(7, user.getUserPincode());
-			psmt.setString(8, user.getUserState());
-			psmt.setInt(9, user.getUserId());
+			psmt.setInt(8, user.getUserId());
 
 			psmt.executeUpdate();
 
@@ -172,13 +167,13 @@ public class UserDao {
 	public String getUserAddress(int uid) {
 		String address = "";
 		try {
-			String query = "select address, city, pincode, state from user where userid = ?";
+			String query = "select address, city, pincode from user where userid = ?";
 			PreparedStatement psmt = this.con.prepareStatement(query);
 			psmt.setInt(1, uid);
 
 			ResultSet rs = psmt.executeQuery();
 			rs.next();
-			address = rs.getString(1) + ", " + rs.getString(2) + "-" + rs.getString(3) + ", " + rs.getString(4);
+			address = rs.getString(1) + ", " + rs.getString(2) + "-" + rs.getString(3);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

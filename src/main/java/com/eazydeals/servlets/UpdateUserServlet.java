@@ -42,7 +42,6 @@ public class UpdateUserServlet extends HttpServlet {
 				user.setUserAddress(userAddress);
 				user.setUserCity(userCity);
 				user.setUserPincode(userPincode);
-				user.setUserState(userState);
 
 				userDao.updateUserAddresss(user);
 				session.setAttribute("activeUser", user);
@@ -62,8 +61,7 @@ public class UpdateUserServlet extends HttpServlet {
 				String userPincode = request.getParameter("pincode");
 				String userState = request.getParameter("state");
 
-				User user = new User(userName, userEmail, userPhone, userGender, userAddress, userCity, userPincode,
-						userState);
+				User user = new User(userName, userEmail, userPhone, userGender, userAddress, userCity, userPincode);
 				user.setUserId(oldUser.getUserId());
 				user.setUserPassword(oldUser.getUserPassword());
 				user.setDateTime(oldUser.getDateTime());

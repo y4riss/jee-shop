@@ -66,60 +66,84 @@ label {
 							</div>  
 							<div class="row">
 								<div class="col-md-6 mt-2">
-									<label class="form-label">City</label> <input
-										class="form-control" type="text" name="city"
-										placeholder="City/District/Town" required>
-								</div>
-								<div class="col-md-6 mt-2">
-									<label class="form-label">Pincode</label> <input
+									<label class="form-label">Zipcode</label> <input
 										class="form-control" type="number" name="pincode"
-										placeholder="Pincode" maxlength="6" required>
+										placeholder="Zipcode" maxlength="6" required>
 								</div>  
 							</div>
 							<div class="row">
 								<div class="col-md-6 mt-2">
-									<label class="form-label">State</label> <select name="state"
+									<label class="form-label">City</label> <select name="city"
 										class="form-select">
-										<option selected>--Select State--</option>
-										<option value="Andaman &amp; Nicobar Islands">Andaman
-											&amp; Nicobar Islands</option>
-										<option value="Andhra Pradesh">Andhra Pradesh</option>
-										<option value="Arunachal Pradesh">Arunachal Pradesh</option>
-										<option value="Assam">Assam</option>
-										<option value="Bihar">Bihar</option>
-										<option value="Chandigarh">Chandigarh</option>
-										<option value="Chhattisgarh">Chhattisgarh</option>
-										<option value="Dadra &amp; Nagar Haveli &amp; Daman &amp; Diu">Dadra
-											&amp; Nagar Haveli &amp; Daman &amp; Diu</option>
-										<option value="Delhi">Delhi</option>
-										<option value="Goa">Goa</option>
-										<option value="Gujarat">Gujarat</option>
-										<option value="Haryana">Haryana</option>
-										<option value="Himachal Pradesh">Himachal Pradesh</option>
-										<option value="Jammu &amp; Kashmir">Jammu &amp;
-											Kashmir</option> 
-										<option value="Jharkhand">Jharkhand</option>
-										<option value="Karnataka">Karnataka</option>
-										<option value="Kerala">Kerala</option>
-										<option value="Ladakh">Ladakh</option>
-										<option value="Lakshadweep">Lakshadweep</option>
-										<option value="Madhya Pradesh">Madhya Pradesh</option>
-										<option value="Maharashtra">Maharashtra</option>
-										<option value="Manipur">Manipur</option>
-										<option value="Meghalaya">Meghalaya</option>
-										<option value="Mizoram">Mizoram</option>
-										<option value="Nagaland">Nagaland</option>
-										<option value="Odisha">Odisha</option>
-										<option value="Puducherry">Puducherry</option>
-										<option value="Punjab">Punjab</option>
-										<option value="Rajasthan">Rajasthan</option>
-										<option value="Sikkim">Sikkim</option>
-										<option value="Tamil Nadu">Tamil Nadu</option>
-										<option value="Telangana">Telangana</option>
-										<option value="Tripura">Tripura</option>
-										<option value="Uttarakhand">Uttarakhand</option>
-										<option value="Uttar Pradesh">Uttar Pradesh</option>
-										<option value="West Bengal">West Bengal</option>
+										<option selected>--Select City--</option>
+										<option value="Agadir-Ida-Ou-Tanane">Agadir-Ida-Ou-Tanane</option>
+										<option value="Al Haouz">Al Haouz</option>
+										<option value="Al Hoceima">Al Hoceima</option>
+										<option value="Aousserd">Aousserd</option>
+										<option value="Assa-Zag">Assa-Zag</option>
+										<option value="Azilal">Azilal</option>
+										<option value="Beni Mellal">Beni Mellal</option>
+										<option value="Ben Slimane">Ben Slimane</option>
+										<option value="Boujdour">Boujdour</option>
+										<option value="Boulemane">Boulemane</option>
+										<option value="Casablanca">Casablanca</option>
+										<option value="Chefchaouen">Chefchaouen</option>
+										<option value="Chichaoua">Chichaoua</option>
+										<option value="Dakhla-Oued Ed-Dahab">Dakhla-Oued Ed-Dahab</option>
+										<option value="Drâa-Tafilalet">Drâa-Tafilalet</option>
+										<option value="El Hajeb">El Hajeb</option>
+										<option value="El Jadida">El Jadida</option>
+										<option value="Errachidia">Errachidia</option>
+										<option value="Es-Semara">Es-Semara</option>
+										<option value="Essaouira">Essaouira</option>
+										<option value="Fahs-Anjra">Fahs-Anjra</option>
+										<option value="Fès-Meknès">Fès-Meknès</option>
+										<option value="Figuig">Figuig</option>
+										<option value="Guelmim">Guelmim</option>
+										<option value="Guercif">Guercif</option>
+										<option value="Ifrane">Ifrane</option>
+										<option value="Inezgane-Aït Melloul">Inezgane-Aït Melloul</option>
+										<option value="Jerada">Jerada</option>
+										<option value="Kénitra">Kénitra</option>
+										<option value="Khémisset">Khémisset</option>
+										<option value="Khénifra">Khénifra</option>
+										<option value="Khouribga">Khouribga</option>
+										<option value="Laâyoune">Laâyoune</option>
+										<option value="Larache">Larache</option>
+										<option value="Marrakech">Marrakech</option>
+										<option value="M'diq-Fnideq">M'diq-Fnideq</option>
+										<option value="Mediouna">Mediouna</option>
+										<option value="Meknès">Meknès</option>
+										<option value="Midelt">Midelt</option>
+										<option value="Mohammadia">Mohammadia</option>
+										<option value="Nador">Nador</option>
+										<option value="Nouaceur">Nouaceur</option>
+										<option value="Ouarzazate">Ouarzazate</option>
+										<option value="Oued Ed-Dahab">Oued Ed-Dahab</option>
+										<option value="Ouezzane">Ouezzane</option>
+										<option value="Oujda-Angad">Oujda-Angad</option>
+										<option value="Rabat-Salé-Kénitra">Rabat-Salé-Kénitra</option>
+										<option value="Rehamna">Rehamna</option>
+										<option value="Safi">Safi</option>
+										<option value="Salé">Salé</option>
+										<option value="Sefrou">Sefrou</option>
+										<option value="Settat">Settat</option>
+										<option value="Sidi Ifni">Sidi Ifni</option>
+										<option value="Sidi Kacem">Sidi Kacem</option>
+										<option value="Sidi Slimane">Sidi Slimane</option>
+										<option value="Skhirate-Témara">Skhirate-Témara</option>
+										<option value="Tan-Tan">Tan-Tan</option>
+										<option value="Tanger-Tétouan-Al Hoceima">Tanger-Tétouan-Al Hoceima</option>
+										<option value="Taourirt">Taourirt</option>
+										<option value="Taounate">Taounate</option>
+										<option value="Taroudant">Taroudant</option>
+										<option value="Tata">Tata</option>
+										<option value="Taza">Taza</option>
+										<option value="Tétouan">Tétouan</option>
+										<option value="Tinghir">Tinghir</option>
+										<option value="Tiznit">Tiznit</option>
+										<option value="Zagora">Zagora</option>
+
 									</select>
 								</div>
 								<div class="col-md-6 mt-2">

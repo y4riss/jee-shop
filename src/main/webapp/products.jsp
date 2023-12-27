@@ -77,7 +77,7 @@ if (prodList != null && prodList.size() == 0) {
 }
 </style>
 </head>
-<body style="background-color: #f0f0f0;">
+<body>
 	<!--navbar -->
 	<%@include file="Components/navbar.jsp"%>
 

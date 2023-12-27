@@ -58,7 +58,6 @@ List<Product> topDeals = productDao.getDiscountedProducts();
 <div>
     <div>
         <h1>Latest Products</h1>
-        <img src="Images\product.png" alt="Latest Product">
     </div>
     <%
     for (int i = 0; i < Math.min(3, productList.size()); i++) {

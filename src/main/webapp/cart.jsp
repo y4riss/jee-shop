@@ -46,8 +46,7 @@ if (activeUser == null) {
 	if (listOfCart == null || listOfCart.size() == 0) {
 	%>
 	<div class="container text-center py-5 px-5">
-		<img src="Images/empty-cart.png" style="max-width: 250px;"
-			class="img-fluid">
+
 		<h4 class="mt-5">Your cart is empty!</h4>
 		<p>Add items to it now.</p>
 		<a href="products.jsp" class="btn btn-primary btn-lg" role="button"

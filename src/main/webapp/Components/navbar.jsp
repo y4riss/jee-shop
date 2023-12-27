@@ -116,6 +116,16 @@ List<Category> categoryList = catDao.getAllCategories();
 	    </div>
 	    <p class="font-bold" ><%=user.getUserName()%></p>
 	  </div>
+	  	<%}else if (admin != null){ %>
+	  	
+				  <div class="flex items-center">
+				          <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span>&#8801;</span>
+        </button>
+				<p class="mr-2" >Welcome, <span class="font-bold" ><%=admin.getName()%></span></p>
+				<a href="LogoutServlet?user=admin" class="btn">Logout</a>
+				</div>
 		<% }else { %>
         <li class="text-lg md:text-base lg:text-lg font-medium group">
        	    <div class="dropdown dropdown-end">

@@ -37,10 +37,9 @@ if (activeAdmin == null) {
 					<div class="card-header text-center">
 						<h3>Edit Product</h3>
 					</div>
-					<form action="AddOperationServlet?pid=<%=pid%>" method="post"
+					<form action="AddOperationServlet?operation=updateProduct&pid=<%=pid%>" method="post"
 						name="updateProductForm" enctype="multipart/form-data">
 						<div class="card-body">
-							<input type="hidden" name="operation" value="updateProduct">
 							<div class="row">
 								<div class="col-md-6 mb-2">
 									<label class="form-label"><b>Product Name</b></label> <input

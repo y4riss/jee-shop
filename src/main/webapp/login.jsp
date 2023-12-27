@@ -1,11 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
 <head>
 <meta charset="ISO-8859-1">
 <title>Login</title>
 <%@include file="Components/common_css_js.jsp"%>
+<link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
 label{
 	font-weight: bold;

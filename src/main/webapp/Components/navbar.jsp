@@ -14,25 +14,23 @@ CategoryDao catDao = new CategoryDao(ConnectionProvider.getConnection());
 List<Category> categoryList = catDao.getAllCategories();
 %>
 
-<nav class="grid grid-cols-12 bg-white p-4">
+<nav class="flex gap-20 py-6 align-center justify-center items-center">
 
     <!-- admin nav bar -->
     <%
     if (admin != null) {
     %>
-    <div class="col-span-3">
-        <a href="admin.jsp" class="text-xl font-semibold"><i class="fa-sharp fa-solid fa-house"></i>&ensp;EazyDeals</a>
+    <div>
+        <a href="admin.jsp"><i></i>&ensp;EazyDeals</a>
         <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span>&#8801;</span>
         </button>
-        <div class="flex justify-end items-center space-x-4">
-            <button type="button" data-bs-toggle="modal" data-bs-target="#add-category"><i
-                    class="fa-solid fa-plus fa-xs"></i>Add Category</button>
-            <button type="button" data-bs-toggle="modal" data-bs-target="#add-product"><i
-                    class="fa-solid fa-plus fa-xs"></i>Add Product</button>
+        <div>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#add-category"><i></i>Add Category</button>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#add-product"><i></i>Add Product</button>
             <a href="admin.jsp"><%=admin.getName()%></a>
-            <a href="LogoutServlet?user=admin"><i class="fa-solid fa-user-slash fa-sm"></i>&nbsp;Logout</a>
+            <a href="LogoutServlet?user=admin"><i></i>&nbsp;Logout</a>
         </div>
     </div>
     <%
@@ -42,17 +40,16 @@ List<Category> categoryList = catDao.getAllCategories();
     <!-- end -->
 
     <!-- for all -->
-    <div class="col-span-3 flex items-center">
-        <a href="index.jsp" class="text-xl font-semibold"><i class="fa-sharp fa-solid fa-house"></i>&ensp;SupTech</a>
-    </div>
-    <div class="col-span-3 flex items-center justify-center">
-        <ul class="flex space-x-4">
-            <li><a href="products.jsp" role="button" aria-expanded="false"> Produits </a></li>
+
+    <div>
+        <ul  class="flex align-baseline justify-center gap-10">
+			<li > <a href="index.jsp"  ><img src="./Images/logo.png" class="logo rounded rounded-lg" /></a></li>        
+            <li><a href="products.jsp" role="button" aria-expanded="false" class="btn btn-sm"> Produits </a></li>
             <li>
-                <details class="dropdown">
-                    <summary class="cursor-pointer">Categorie</summary>
-                    <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                        <li><a href="products.jsp?category=0">Tous les produits</a></li>
+	            <details class="dropdown">
+				  <summary class="btn btn-sm">Categories</summary>
+				  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                       <li><a href="products.jsp?category=0">Tous les produits</a></li>
                         <%
                         for (Category c : categoryList) {
                         %>
@@ -60,16 +57,15 @@ List<Category> categoryList = catDao.getAllCategories();
                         <%
                         }
                         %>
-                    </ul>
-                </details>
+				  </ul>
+				</details>
             </li>
         </ul>
     </div>
-    <div class="col-span-3">
-        <form class="w-full flex" role="search" action="products.jsp" method="get">
-            <input class="input input-bordered w-full max-w-xs" name="search" type="search"
-                placeholder="Search for products" aria-label="Search">
-            <button type="submit" class="btn">Search</button>
+    <div class="w-full">
+        <form class=" w-full flex" role="search" action="products.jsp" method="get">
+            <input class="input input-bordered w-full " name="search" type="search"  autocomplete="off" placeholder="Search for products" aria-label="Search">
+            <button  class="btn" type="submit">Search</button>
         </form>
     </div>
 
@@ -79,19 +75,18 @@ List<Category> categoryList = catDao.getAllCategories();
         CartDao cartDao = new CartDao(ConnectionProvider.getConnection());
         int cartCount = cartDao.getCartCountByUserId(user.getUserId());
     %>
-    <div class="col-span-3 flex justify-end items-center space-x-4">
-        <a href="cart.jsp" aria-current="page"><i class="fa-solid fa-cart-shopping"></i> &nbsp;Cart<span
-                class="badge"><%=cartCount%></span></a>
+    <div class="flex gap-2 mr-2">
+        <a href="cart.jsp" aria-current="page"><i></i> &nbsp;Cart<span><%=cartCount%></span></a>
         <a href="profile.jsp" aria-current="page"><%=user.getUserName()%></a>
-        <a href="LogoutServlet?user=user"><i class="fa-solid fa-user-slash"></i>&nbsp;Logout</a>
+        <a href="LogoutServlet?user=user"><i></i>&nbsp;Logout</a>
     </div>
     <%
     } else {
     %>
-    <div class="col-span-3 flex justify-end items-center space-x-4">
-        <a href="register.jsp"><i class="fa-solid fa-user-plus"></i>&nbsp;Register</a>
-        <a href="login.jsp"><i class="fa-solid fa-user-lock"></i>&nbsp;Login</a>
-        <a href="adminlogin.jsp">&nbsp;Admin</a>
+    <div class="flex  gap-2 mr-2">
+        <a  class="btn btn-sm" href="register.jsp"><i></i>&nbsp;Register</a>
+        <a class="btn btn-sm" href="login.jsp"><i></i>&nbsp;Login</a>
+        <a  class="btn btn-sm"href="adminlogin.jsp">&nbsp;Admin</a>
     </div>
     <%
     }
@@ -99,3 +94,4 @@ List<Category> categoryList = catDao.getAllCategories();
     %>
     <!-- end  -->
 </nav>
+

@@ -25,8 +25,7 @@ ProductDao pDao = new ProductDao(ConnectionProvider.getConnection());
 	if (wlist == null || wlist.size() == 0) {
 	%>
 	<div class="container mt-5 mb-5 text-center">
-		<img src="Images/wishlist.png" style="max-width: 200px;"
-			class="img-fluid">
+
 		<h4 class="mt-3">Empty Wishlist</h4>
 		You have no items in your wishlist. Start adding!
 	</div>

@@ -44,14 +44,14 @@ List<Category> categoryList = catDao.getAllCategories();
       class="menu-resposive hidden fixed flex inset-0 transition-all bg-white/70 backdrop-blur-xl z-20 md:static md:bg-transparent md:flex items-center justify-center space-y-8 md:space-y-0 flex-col md:flex-row md:space-x-8 -mt-56 md:mt-0 ">
       <ul class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6 lg:md:-x-8">
         <li class="text-lg md:text-base lg:text-lg font-medium group text-yellow-500">
-          <a href="/ecommerce/index.jsp">Accueil
+          <a href="/ecommerce/index.jsp">Home
           </a>
           <div
             class="h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
           </div>
         </li>
         <li class="text-lg md:text-base lg:text-lg font-medium group">
-          <a href="/ecommerce/products.jsp">Produits
+          <a href="/ecommerce/products.jsp">Products
           </a>
           <div
             class="h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
@@ -61,7 +61,7 @@ List<Category> categoryList = catDao.getAllCategories();
 	            <details class="dropdown">
 				  <summary class="cursor-pointer">Categories</summary>
 				  <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                       <li><a href="products.jsp?category=0">Tous les produits</a></li>
+                       <li><a href="products.jsp?category=0">All products</a></li>
                         <%
                         for (Category c : categoryList) {
                         %>
@@ -131,7 +131,7 @@ List<Category> categoryList = catDao.getAllCategories();
         <li class="text-lg md:text-base lg:text-lg font-medium group">
        	    <div class="dropdown dropdown-end">
 	      <div tabindex="0" role="button" class="">
-	        	Se connecter
+	        	Login
 	      </div>
 	      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
 	        <li>
@@ -147,7 +147,7 @@ List<Category> categoryList = catDao.getAllCategories();
           </div>
         </li>
         <li class="text-lg md:text-base lg:text-lg font-medium group">
-          <a href="register.jsp">S'inscrire
+          <a href="register.jsp">Register
           </a>
           <div
             class="h-0.5 bg-yellow-500 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">

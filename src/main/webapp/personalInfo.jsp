@@ -77,10 +77,9 @@ label {
 			</div>
 		</div>
 		<div class="row mt-2">
-			<label class="form-label">State</label>
+			<label class="form-label">City</label>
 			<div class="input-group mb-3">
-				<input class="form-control" type="text"
-					value="<%=user1.getUserCity()%>">
+				<p class="form-control"><%=user1.getUserCity()%></p>
 					 <select name="city"
 					id="state-list" class="form-select">
 					<option selected>--Select City--</option>

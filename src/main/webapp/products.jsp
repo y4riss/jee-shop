@@ -111,6 +111,9 @@
             %>
         </div>
     </div>
+    
+    		<!--footer -->
+	<%@include file="Components/footer.jsp"%>
 </body>
 
 </html>

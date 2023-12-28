@@ -35,7 +35,7 @@ List<Product> topDeals = productDao.getDiscountedProducts();
 		        <a href="products.jsp?category=<%=c.getCategoryId()%>">
 		            <div class="rounded ">
 		                <div class="w-20 flex h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded overflow-hidden mx-auto ">
-		                    <img src="./Images/<%=c.getCategoryImage()%>" class=" object-cover" alt="<%=c.getCategoryName()%> Image">
+		                    <img src="./Product_imgs/<%=c.getCategoryImage()%>" class=" object-cover" alt="<%=c.getCategoryName()%> Image">
 		                </div>
 		               <div class="flex items-center justify-center  w-full  p-1 border rounded border-black bg-gray-100">
 		                <h6 class="font-bold text-center mt-2"><%=c.getCategoryName()%></h6>

@@ -45,33 +45,33 @@ Product product = (Product) productDao.getProductsByProductId(productId);
             <div class="flex flex-wrap -mx-4">
                 <div class="w-full mb-8 md:w-1/2 md:mb-0">
                     <div class="sticky top-0 z-50 overflow-hidden ">
-                        <div class="relative mb-6 lg:mb-10 lg:h-2/4 flex items-center justify-center ">
+                        <div class="relative mb-6 lg:mb-10 lg:h-2/4 flex items-center justify-center rounded">
                             <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
-                                class="object-cover w-full lg:h-full max-w-[300px] max-h-[300px] ">
+                                class="object-cover w-full lg:h-full max-w-[300px] max-h-[300px] rounded">
                         </div>
-                        <div class="flex-wrap hidden md:flex items-center justify-center">
+                        <div class="flex-wrap hidden md:flex items-center justify-center rounded">
                             <div class="w-1/2 p-2 sm:w-1/4 flex items-center justify-center">
                                 <a href="#" class="block border border-blue-300 hover:border-blue-300">
                                     <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
-                                        class="object-cover w-full lg:h-20 max-w-[60px]">
+                                        class="object-cover w-full lg:h-20 max-w-[60px] rounded">
                                 </a>
                             </div>
-                            <div class="w-1/2 p-2 sm:w-1/4 flex items-center justify-center">
+                            <div class="w-1/2 p-2 sm:w-1/4 flex items-center justify-center rounded">
                                 <a href="#" class="block border border-transparent hover:border-blue-300">
                                     <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
-                                        class="object-cover w-full lg:h-20 max-w-[60px]">
+                                        class="object-cover w-full lg:h-20 max-w-[60px] rounded">
                                 </a>
                             </div>
-                            <div class="w-1/2 p-2 sm:w-1/4 flex items-center justify-center">
+                            <div class="w-1/2 p-2 sm:w-1/4 flex items-center justify-center rounded">
                                 <a href="#" class="block border border-transparent hover:border-blue-300">
                                     <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
-                                        class="object-cover w-full lg:h-20 max-w-[60px]">
+                                        class="object-cover w-full lg:h-20 max-w-[60px] rounded">
                                 </a>
                             </div>
-                            <div class="w-1/2 p-2 sm:w-1/4 flex items-center justify-center">
+                            <div class="w-1/2 p-2 sm:w-1/4 flex items-center justify-center rounded">
                                 <a href="#" class="block border border-transparent hover:border-blue-300">
                                     <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
-                                        class="object-cover w-full lg:h-20 max-w-[60px]">
+                                        class="object-cover w-full lg:h-20 max-w-[60px] rounded">
                                 </a>
                             </div>
                         </div>
@@ -84,9 +84,9 @@ Product product = (Product) productDao.getProductsByProductId(productId);
                             <h2 class="max-w-xl mb-6 text-2xl font-bold  md:text-4xl">
                                 <%=product.getProductName()%></h2>
                             <p class="inline-block mb-6 text-4xl font-bold text-gray-700 ">
-                                <span>$1500.99</span>
+                                <span><%=product.getProductPriceAfterDiscount()%></span>
                                 <span
-                                    class="text-base font-normal text-gray-500 line-through ">$1800.99</span>
+                                    class="text-base font-normal text-gray-500 line-through "><%=product.getProductPrice()%></span>
                             </p>
                             <p class="max-w-md text-gray-700 dark:text-gray-400">
                         <%=product.getProductDescription()%>

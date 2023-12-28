@@ -51,7 +51,6 @@ label{
 							</div>
 						</form>
 						<div class="mt-3 text-center">
-							<h6><a href="forgot_password.jsp" style="text-decoration: none">Forgot Password?</a></h6>
 							<h6>
 								Don't have an account?<a href="register.jsp"
 									style="text-decoration: none"> Sign Up</a>

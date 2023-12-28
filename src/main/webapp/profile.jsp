@@ -130,5 +130,8 @@ if (activeUser == null) {
 			});
 		});
 	</script>
+	
+			<!--footer -->
+	<%@include file="Components/footer.jsp"%>
 </body>
 </html>

@@ -1,11 +1,11 @@
-<%@page import="com.eazydeals.entities.Admin"%>
-<%@page import="com.eazydeals.entities.Cart"%>
-<%@page import="com.eazydeals.dao.CartDao"%>
-<%@page import="com.eazydeals.entities.User"%>
+<%@page import="com.suptech.entities.Admin"%>
+<%@page import="com.suptech.entities.Cart"%>
+<%@page import="com.suptech.dao.CartDao"%>
+<%@page import="com.suptech.entities.User"%>
 <%@page import="java.util.List"%>
-<%@page import="com.eazydeals.entities.Category"%>
-<%@page import="com.eazydeals.helper.ConnectionProvider"%>
-<%@page import="com.eazydeals.dao.CategoryDao"%>
+<%@page import="com.suptech.entities.Category"%>
+<%@page import="com.suptech.helper.ConnectionProvider"%>
+<%@page import="com.suptech.dao.CategoryDao"%>
 <%
 User user = (User) session.getAttribute("activeUser");
 Admin admin = (Admin) session.getAttribute("activeAdmin");

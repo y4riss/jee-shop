@@ -1,6 +1,6 @@
-<%@page import="com.eazydeals.dao.ProductDao"%>
-<%@page import="com.eazydeals.entities.Product"%>
-<%@page import="com.eazydeals.helper.ConnectionProvider"%>
+<%@page import="com.suptech.dao.ProductDao"%>
+<%@page import="com.suptech.entities.Product"%>
+<%@page import="com.suptech.helper.ConnectionProvider"%>
 <%@page errorPage="error_exception.jsp"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>

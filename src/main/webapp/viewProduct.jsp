@@ -1,6 +1,6 @@
-<%@page import="com.eazydeals.dao.WishlistDao"%>
-<%@page import="com.eazydeals.dao.ProductDao"%>
-<%@page import="com.eazydeals.entities.Product"%>
+<%@page import="com.suptech.dao.WishlistDao"%>
+<%@page import="com.suptech.dao.ProductDao"%>
+<%@page import="com.suptech.entities.Product"%>
 <%@page errorPage="error_exception.jsp"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -45,33 +45,33 @@ Product product = (Product) productDao.getProductsByProductId(productId);
             <div class="flex flex-wrap -mx-4">
                 <div class="w-full mb-8 md:w-1/2 md:mb-0">
                     <div class="sticky top-0 z-50 overflow-hidden ">
-                        <div class="relative mb-6 lg:mb-10 lg:h-2/4 ">
+                        <div class="relative mb-6 lg:mb-10 lg:h-2/4 flex items-center justify-center ">
                             <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
-                                class="object-cover w-full lg:h-full ">
+                                class="object-cover w-full lg:h-full max-w-[300px] max-h-[300px] ">
                         </div>
-                        <div class="flex-wrap hidden md:flex ">
-                            <div class="w-1/2 p-2 sm:w-1/4">
+                        <div class="flex-wrap hidden md:flex items-center justify-center">
+                            <div class="w-1/2 p-2 sm:w-1/4 flex items-center justify-center">
                                 <a href="#" class="block border border-blue-300 hover:border-blue-300">
                                     <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
-                                        class="object-cover w-full lg:h-20">
+                                        class="object-cover w-full lg:h-20 max-w-[60px]">
                                 </a>
                             </div>
-                            <div class="w-1/2 p-2 sm:w-1/4">
+                            <div class="w-1/2 p-2 sm:w-1/4 flex items-center justify-center">
                                 <a href="#" class="block border border-transparent hover:border-blue-300">
                                     <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
-                                        class="object-cover w-full lg:h-20">
+                                        class="object-cover w-full lg:h-20 max-w-[60px]">
                                 </a>
                             </div>
-                            <div class="w-1/2 p-2 sm:w-1/4">
+                            <div class="w-1/2 p-2 sm:w-1/4 flex items-center justify-center">
                                 <a href="#" class="block border border-transparent hover:border-blue-300">
                                     <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
-                                        class="object-cover w-full lg:h-20">
+                                        class="object-cover w-full lg:h-20 max-w-[60px]">
                                 </a>
                             </div>
-                            <div class="w-1/2 p-2 sm:w-1/4">
+                            <div class="w-1/2 p-2 sm:w-1/4 flex items-center justify-center">
                                 <a href="#" class="block border border-transparent hover:border-blue-300">
                                     <img src="./Product_imgs/<%=product.getProductImages()%>" alt=""
-                                        class="object-cover w-full lg:h-20">
+                                        class="object-cover w-full lg:h-20 max-w-[60px]">
                                 </a>
                             </div>
                         </div>

@@ -26,46 +26,42 @@ List<Product> topDeals = productDao.getDiscountedProducts();
 
 	
 	<!-- Category list -->
-	<div class="">
-		<div class="">
-	<div class="p-2 text-center  font-bold text-white"  style="background : #151515;">Categories</div>
-			<div class="flex justify-center align-center gap-40 p-4">
-				<%
-				for (Category c : categoryList) {
-				%>
-				<div class="">
-					<a href="products.jsp?category=<%=c.getCategoryId()%>"
-						>
-						<div class=" rounded overflow-hidden ">
-							<div class="w-[100px] h-[100px] rounded overflow-hidden">
-								<img src="./Images/<%=c.getCategoryImage()%>" class="h-full"
-									>
-							</div>
-							<h6 class="font-bold" ><%=c.getCategoryName()%></h6>
-						</div>
-					</a>
-				</div>
-
-				<%
-				}
-				%>
-			</div>
+		<div class="p-2 text-center font-bold text-white" style="background: #151515;">Categories</div>
+		<div class="flex justify-center align-center flex-wrap gap-4 p-4">
+		    <%
+		    for (Category c : categoryList) {
+		    %>
+		    <div class="flex-shrink-0 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/6 ">
+		        <a href="products.jsp?category=<%=c.getCategoryId()%>">
+		            <div class="rounded ">
+		                <div class="w-20 flex h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded overflow-hidden mx-auto ">
+		                    <img src="./Images/<%=c.getCategoryImage()%>" class=" object-cover" alt="<%=c.getCategoryName()%> Image">
+		                </div>
+		               <div class="flex items-center justify-center  w-full  p-1 border rounded border-black bg-gray-100">
+		                <h6 class="font-bold text-center mt-2"><%=c.getCategoryName()%></h6>
+		               </div>
+		            </div>
+		        </a>
+		    </div>
+		    <%
+		    }
+		    %>
 		</div>
-			<div class="p-4 text-center text-white bg-gray-900" style="background : #151515;"></div>
-		
-	</div>
+		<div class="p-4 text-center text-white bg-gray-900" style="background: #151515;"></div>
+
 	<!-- end of list -->
 
 	<!-- header-->
-<header class=" gap-10 h-fit p-4">
-    <div class="left flex flex-col items-center justify-center gap-10 ">
-        <img src="./Images/cameras.webp" class="w-[200px] rounded rounded-lg" />
-        <img src="./Images/cameras.webp" class="w-[200px] rounded rounded-lg" />
+<header class="gap-10 p-4">
+    <div class="left flex flex-col items-center justify-center gap-5 md:gap-10 ">
+        <img src="./Images/header_left_1.jpg" class="w-32 md:w-48 rounded-lg" alt="Camera Image" />
+        <img src="./Images/header_left_2.webp" class="w-32 md:w-48 rounded-lg" alt="Camera Image" />
     </div>
-    <div class="right  h-[300px] rounded overflow-hidden">
-        <img src="./Images/header_img.png" class="w-full h-[300px]" />
+    <div class="right h-[200px] md:h-[300px] rounded overflow-hidden">
+        <img src="./Images/header_img.png" class="w-full h-full object-cover" alt="Header Image" />
     </div>
 </header>
+
 
 	<!-- end of header -->
 
@@ -73,7 +69,7 @@ List<Product> topDeals = productDao.getDiscountedProducts();
 	    <div>
 	<div class="p-4 text-center  font-bold bg-gray-900 text-white my-4" style="background : #151515;" >Latest products</div>
     </div>
-<div class="grid grid-cols-3 gap-10 ">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 items-center justify-center p-2">
 
     <%
     for (int i = 0; i < Math.min(3, productList.size()); i++) {
@@ -132,7 +128,7 @@ List<Product> topDeals = productDao.getDiscountedProducts();
 	    <div>
 	<div class="p-4 text-center  font-bold bg-gray-900 text-white my-4" style="background : #151515;" >Top deal</div>
     </div>
-<div class="grid grid-cols-4 gap-10 ">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 items-center justify-center p-2">
 
     <%
     for (int i = 0; i < Math.min(4, topDeals.size()); i++) {

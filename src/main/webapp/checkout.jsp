@@ -52,9 +52,8 @@ String from = (String)session.getAttribute("from");
 							%>
 							<br>
 							<div class="text-end">
-								<button type="button" class="btn btn-outline-primary"
-									data-bs-toggle="modal" data-bs-target="#exampleModal">
-									Change Address</button>
+			<button class="btn" onclick="my_modal_2.showModal()">Change address</button>
+
 							</div>
 						</div>
 						<hr>
@@ -179,16 +178,10 @@ String from = (String)session.getAttribute("from");
 
 
 	<!--Change Address Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="exampleModalLabel">Change
-						Address</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
+	<!-- Open the modal using ID.showModal() method -->
+	<dialog id="my_modal_2" class="modal">
+	  <div class="modal-box">
+	    <h3 class="font-bold text-lg">Change Address!</h3>
 				<form action="UpdateUserServlet" method="post">
 					<input type="hidden" name="operation" value="changeAddress">
 					<div class="modal-body mx-3">
@@ -199,25 +192,96 @@ String from = (String)session.getAttribute("from");
 								class="form-control" required></textarea>
 						</div>
 						<div class="mt-2">
-							<label class="form-label fw-bold">City</label> <input
-								class="form-control" type="text" name="city"
-								placeholder="City/District/Town" required>
-						</div>
-						<div class="mt-2">
 							<label class="form-label fw-bold">Zipcode</label> <input
 								class="form-control" type="number" name="pincode"
-								placeholder="Pincode" maxlength="6" required>
+								placeholder="Zipcode" maxlength="6" required>
+						</div>
+												<div class="mt-2">
+							<label class="form-label fw-bold">State</label> <select name="city"
+										class="form-select">
+										<option selected>--Select City--</option>
+										<option value="Agadir-Ida-Ou-Tanane">Agadir-Ida-Ou-Tanane</option>
+										<option value="Al Haouz">Al Haouz</option>
+										<option value="Al Hoceima">Al Hoceima</option>
+										<option value="Aousserd">Aousserd</option>
+										<option value="Assa-Zag">Assa-Zag</option>
+										<option value="Azilal">Azilal</option>
+										<option value="Beni Mellal">Beni Mellal</option>
+										<option value="Ben Slimane">Ben Slimane</option>
+										<option value="Boujdour">Boujdour</option>
+										<option value="Boulemane">Boulemane</option>
+										<option value="Casablanca">Casablanca</option>
+										<option value="Chefchaouen">Chefchaouen</option>
+										<option value="Chichaoua">Chichaoua</option>
+										<option value="Dakhla-Oued Ed-Dahab">Dakhla-Oued Ed-Dahab</option>
+										<option value="Drâa-Tafilalet">Drâa-Tafilalet</option>
+										<option value="El Hajeb">El Hajeb</option>
+										<option value="El Jadida">El Jadida</option>
+										<option value="Errachidia">Errachidia</option>
+										<option value="Es-Semara">Es-Semara</option>
+										<option value="Essaouira">Essaouira</option>
+										<option value="Fahs-Anjra">Fahs-Anjra</option>
+										<option value="Fès-Meknès">Fès-Meknès</option>
+										<option value="Figuig">Figuig</option>
+										<option value="Guelmim">Guelmim</option>
+										<option value="Guercif">Guercif</option>
+										<option value="Ifrane">Ifrane</option>
+										<option value="Inezgane-Aït Melloul">Inezgane-Aït Melloul</option>
+										<option value="Jerada">Jerada</option>
+										<option value="Kénitra">Kénitra</option>
+										<option value="Khémisset">Khémisset</option>
+										<option value="Khénifra">Khénifra</option>
+										<option value="Khouribga">Khouribga</option>
+										<option value="Laâyoune">Laâyoune</option>
+										<option value="Larache">Larache</option>
+										<option value="Marrakech">Marrakech</option>
+										<option value="M'diq-Fnideq">M'diq-Fnideq</option>
+										<option value="Mediouna">Mediouna</option>
+										<option value="Meknès">Meknès</option>
+										<option value="Midelt">Midelt</option>
+										<option value="Mohammadia">Mohammadia</option>
+										<option value="Nador">Nador</option>
+										<option value="Nouaceur">Nouaceur</option>
+										<option value="Ouarzazate">Ouarzazate</option>
+										<option value="Oued Ed-Dahab">Oued Ed-Dahab</option>
+										<option value="Ouezzane">Ouezzane</option>
+										<option value="Oujda-Angad">Oujda-Angad</option>
+										<option value="Rabat-Salé-Kénitra">Rabat-Salé-Kénitra</option>
+										<option value="Rehamna">Rehamna</option>
+										<option value="Safi">Safi</option>
+										<option value="Salé">Salé</option>
+										<option value="Sefrou">Sefrou</option>
+										<option value="Settat">Settat</option>
+										<option value="Sidi Ifni">Sidi Ifni</option>
+										<option value="Sidi Kacem">Sidi Kacem</option>
+										<option value="Sidi Slimane">Sidi Slimane</option>
+										<option value="Skhirate-Témara">Skhirate-Témara</option>
+										<option value="Tan-Tan">Tan-Tan</option>
+										<option value="Tanger-Tétouan-Al Hoceima">Tanger-Tétouan-Al Hoceima</option>
+										<option value="Taourirt">Taourirt</option>
+										<option value="Taounate">Taounate</option>
+										<option value="Taroudant">Taroudant</option>
+										<option value="Tata">Tata</option>
+										<option value="Taza">Taza</option>
+										<option value="Tétouan">Tétouan</option>
+										<option value="Tinghir">Tinghir</option>
+										<option value="Tiznit">Tiznit</option>
+										<option value="Zagora">Zagora</option>
+
+									</select>
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary"
-							data-bs-dismiss="modal">Close</button>
+
 						<button type="submit" class="btn btn-primary">Save</button>
 					</div>
 				</form>
-			</div>
-		</div>
-	</div>
+	  </div>
+	  <form method="dialog" class="modal-backdrop">
+	    <button>close</button>
+	  </form>
+	</dialog>
+
 	<!-- end modal -->
 
 </body>

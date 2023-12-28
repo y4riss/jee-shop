@@ -38,9 +38,9 @@ if (activeAdmin == null) {
 				<td><img src="Images/<%=c.getCategoryImage()%>"
 					style="width: 60px; height: 60px; width: auto;"></td>
 				<td><%=c.getCategoryName()%></td>
-				<td><a href="update_category.jsp?cid=<%=c.getCategoryId()%>" role="button" class="btn btn-secondary">Update</a>&emsp;<a
+				<td><a href="update_category.jsp?cid=<%=c.getCategoryId()%>" role="button" class="btn btn-warning">Update</a>&emsp;<a
 					href="AddOperationServlet?cid=<%=c.getCategoryId()%>&operation=deleteCategory"
-					class="btn btn-danger" role="button">Delete</a></td>
+					class="btn btn-error" role="button">Delete</a></td>
 			</tr>
 			<%
 			}

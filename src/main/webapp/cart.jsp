@@ -104,7 +104,7 @@ if (activeUser == null) {
 						<td><%=c.getQuantity() * prod.getProductPriceAfterDiscount()%></td>
 						<td><a
 							href="CartOperationServlet?cid=<%=c.getCartId()%>&opt=3"
-							class="btn btn-secondary" role="button">Remove</a></td>
+							class="btn btn-warning" role="button">Remove</a></td>
 					</tr>
 					<%
 					totalPrice += c.getQuantity() * prod.getProductPriceAfterDiscount();

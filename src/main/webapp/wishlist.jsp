@@ -49,7 +49,7 @@ ProductDao pDao = new ProductDao(ConnectionProvider.getConnection());
 				<td><%=p.getProductPriceAfterDiscount()%></td>
 				<td><a
 					href="WishlistServlet?uid=<%=u1.getUserId()%>&pid=<%=p.getProductId()%>&op=delete"
-					class="btn btn-secondary" role="button">Remove</a></td>
+					class="btn btn-warning" role="button">Remove</a></td>
 			</tr>
 			<%
 			}

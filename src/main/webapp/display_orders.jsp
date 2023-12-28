@@ -93,7 +93,7 @@ UserDao userDao = new UserDao(ConnectionProvider.getConnection());
 						<%
 						} else {
 						%>
-						<button type="submit" class="btn btn-secondary">Update</button> 
+						<button type="submit" class="btn btn-warning">Update</button> 
 						<%
 						 }
 						 %>

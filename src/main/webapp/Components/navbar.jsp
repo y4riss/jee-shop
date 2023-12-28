@@ -123,7 +123,8 @@ List<Category> categoryList = catDao.getAllCategories();
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span>&#8801;</span>
         </button>
-				<p class="mr-2" >Welcome, <span class="font-bold" ><%=admin.getName()%></span></p>
+        	<a href="admin.jsp"><p class="mr-2" >Welcome, <span class="font-bold" ><%=admin.getName()%></span></p>
+        	</a>
 				<a href="LogoutServlet?user=admin" class="btn">Logout</a>
 				</div>
 		<% }else { %>

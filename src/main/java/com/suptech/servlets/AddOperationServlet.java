@@ -1,6 +1,7 @@
 package com.suptech.servlets;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +19,7 @@ import com.suptech.entities.Message;
 import com.suptech.entities.Product;
 import com.suptech.helper.ConnectionProvider;
 
+@MultipartConfig
 public class AddOperationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -29,16 +31,22 @@ public class AddOperationServlet extends HttpServlet {
 		ProductDao pdao = new ProductDao(ConnectionProvider.getConnection());
 		HttpSession session = request.getSession();
 		Message message = null;
+		System.out.println("Content Type: " + request.getContentType());
 
 		if (operation.trim().equals("addCategory")) {
 
+
 			String categoryName = request.getParameter("category_name");
 			Part part = request.getPart("category_img");
-			Category category = new Category(categoryName, part.getSubmittedFileName());
+			String submitedFileName = "default.jpg";
+			if(part != null) submitedFileName = part.getSubmittedFileName();
+			if(submitedFileName == null) submitedFileName = "default.jpg";
+			Category category = new Category(categoryName, submitedFileName);
 			boolean flag = catDao.saveCategory(category);
-
+			System.out.println("Category Name: " + categoryName);
+			System.out.println("Submitted File Name: " + submitedFileName);
 			String path = request.getServletContext().getRealPath("/") + "Product_imgs" + File.separator
-					+ part.getSubmittedFileName();
+					+ submitedFileName;
 
 			try {
 				FileOutputStream fos = new FileOutputStream(path);

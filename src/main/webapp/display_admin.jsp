@@ -88,7 +88,7 @@ label {
 								<td><%=a.getName() %></td>
 								<td><%=a.getEmail() %></td>
 								<td><%=a.getPhone() %></td>
-								<td><a href="AdminServlet?operation=delete&id=<%=a.getId()%>" role="button" class="btn btn-danger">Remove</a></td>
+								<td><a href="AdminServlet?operation=delete&id=<%=a.getId()%>" role="button" class="btn btn-error">Remove</a></td>
 							</tr>
 							<%
 							}
